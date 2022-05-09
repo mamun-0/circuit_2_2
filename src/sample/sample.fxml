@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="408.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox layoutX="6.0" layoutY="8.0" prefHeight="384.0" prefWidth="168.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="33.0" prefWidth="167.0" text="Resistor(Ohm)">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputResistance" alignment="CENTER" promptText="input resistance" />
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="167.0" text="Inductor(henry)">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputInductance" alignment="CENTER" layoutX="10.0" layoutY="43.0" promptText="input inductance" />
+            <Label alignment="CENTER" layoutX="10.0" layoutY="68.0" prefHeight="33.0" prefWidth="167.0" text="Capacitor(farad)">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputCapacitance" alignment="CENTER" layoutX="10.0" layoutY="101.0" promptText="input capacitance" />
+            <Label alignment="CENTER" layoutX="10.0" layoutY="126.0" prefHeight="33.0" prefWidth="167.0" text="Frequency(Hz)">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputFrequency" alignment="CENTER" layoutX="10.0" layoutY="159.0" promptText="input frequency" />
+            <Label alignment="CENTER" layoutX="10.0" layoutY="184.0" prefHeight="33.0" prefWidth="167.0" text="AC Voltage">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputVoltage" alignment="CENTER" layoutX="10.0" layoutY="217.0" promptText="input voltage" />
+            <Button fx:id="submit" mnemonicParsing="false" onAction="#onClickSubmit" prefHeight="33.0" prefWidth="170.0" text="Submit" translateY="8.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <LineChart fx:id="lineChart" layoutX="207.0" prefHeight="395.0" prefWidth="498.0" title="Time Vs Voltage">
+        <xAxis>
+          <NumberAxis label="Time" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Voltage" side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
